@@ -1,62 +1,47 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package barang;
-
-/**
- *
- * @author budi
- */
 public class Mobil {
-    protected String merek;
-    private String model;
-    private int tahun;
-    private double harga;
-    String warna;
+    private final String merk;
+    private final String model;
+    private final int tahun;
+    private final double harga;
 
-    public Mobil(String merek, String model, int tahun, double harga) {
-        this.merek = merek;
+    public Mobil(String merk, String model, int tahun, double harga) {
+        this.merk = merk;
         this.model = model;
         this.tahun = tahun;
         this.harga = harga;
     }
 
-    // Getter dan setter untuk atribut-atribut mobil
-
-    public String getMerek() {
-        return merek;
-    }
-
-    public void setMerek(String merek) {
-        this.merek = merek;
+    public String getMerk() {
+        return merk;
     }
 
     public String getModel() {
         return model;
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
-
     public int getTahun() {
         return tahun;
-    }
-
-    public void setTahun(int tahun) {
-        this.tahun = tahun;
     }
 
     public double getHarga() {
         return harga;
     }
 
-    public void setHarga(double harga) {
-        this.harga = harga;
-    }
+    public static void main(String[] args) {
+        Mobil mobil1 = new Mobil("Toyota", "Avanza", 2021, 150000000);
+        Mobil mobil2 = new Mobil("Honda", "Civic", 2022, 200000000);
 
- 
-    
-    
+        System.out.println("Mobil 1:");
+        System.out.println("Merk: " + mobil1.getMerk());
+        System.out.println("Model: " + mobil1.getModel());
+        System.out.println("Tahun: " + mobil1.getTahun());
+        System.out.println("Harga: " + mobil1.getHarga());
+
+        System.out.println("\nMobil 2:");
+        System.out.println("Merk: " + mobil2.getMerk());
+        System.out.println("Model: " + mobil2.getModel());
+        System.out.println("Tahun: " + mobil2.getTahun());
+        System.out.println("Harga: " + mobil2.getHarga());
+    }
 }
+
